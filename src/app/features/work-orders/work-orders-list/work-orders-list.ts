@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { WorkOrdersService } from '../work-orders.service';
 import { AsyncPipe } from '@angular/common';
-import { signal, computed } from '@angular/core';
 @Component({
   selector: 'app-work-orders-list',
   imports: [AsyncPipe],

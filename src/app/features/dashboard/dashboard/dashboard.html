@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<div class="flex flex-col gap-2">
+  <div class="flex flex-row gap-2 flex-wrap">
+    <app-kpi-card label="Opened" [value]="(openCount$ | async) ?? 0"></app-kpi-card>
+    <app-kpi-card label="In Progress" [value]="(inProgressCount$ | async) ?? 0"></app-kpi-card>
+    <app-kpi-card label="Completed" [value]="(completedCount$ | async) ?? 0"></app-kpi-card>
+  </div>
+</div>
