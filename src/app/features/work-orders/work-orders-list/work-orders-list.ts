@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
+import { WorkOrdersService } from '../work-orders.service';
+import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-work-orders-list',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './work-orders-list.html',
   styleUrl: './work-orders-list.scss',
 })
 export class WorkOrdersList {
-
+  private workOrdersService = inject(WorkOrdersService);
+  workOrders$ = this.workOrdersService.workOrders$;
 }
