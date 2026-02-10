@@ -1,3 +1,5 @@
+<h3>{{ title }}</h3>
+
 @if (workOrders$ | async; as workOrders) {
   @for (workOrder of workOrders; track workOrder.id) {
     <li>{{ workOrder.id }} {{ workOrder.title }}</li>
